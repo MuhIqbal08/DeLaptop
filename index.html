@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0068ffff",
+              secondary: "#dbeaffff",
+            },
+            spacing: {
+              "90vh": "90vh",
+              "550px": "550px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
+    <title>DELAPTOP</title>
+    <link rel="icon" href="assets/DL.png" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div class="min-h-screen bg-secondary">
+      <!-- Navbar -->
+      <nav class="flex justify-between px-8 py-4">
+        <!-- Logo -->
+        <a class="flex gap-2 items-center" href="#">
+          <img
+            loading="lazy" src="assets/DL.png" alt="" class="w-8 h-8" />
+          <h1 class="font-bold text-xl uppercase text-blue-900">
+            De<span class="text-primary">Laptop</span>
+          </h1>
+        </a>
+        <ul class="hidden gap-6 items-center font-semibold sm:flex text-base">
+          <li class="text-blue-900 hover:text-primary transition-all">
+            <a href="#">Home</a>
+          </li>
+          <li class="text-blue-900 hover:text-primary transition-all">
+            <a href="#product">Product</a>
+          </li>
+          <li class="text-blue-900 hover:text-primary transition-all">
+            <a href="#about">About</a>
+          </li>
+          <li class="text-blue-900 hover:text-primary transition-all">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="text-blue-900 hover:text-primary transition-all">
+            <a href="#account">Account</a>
+          </li>
+        </ul>
+        <ul class="flex gap-6 items-center text-base">
+          <li class="hover:text-primary">
+            <a href="#search"><i data-feather="search"></i></a>
+          </li>
+          <li class="hover:text-primary">
+            <a href="#cart"><i data-feather="shopping-cart"></i></a>
+          </li>
+          <li class="block sm:hidden hover:text-primary" id="hamburgerMenu">
+            <a href=""><i data-feather="menu"></i></a>
+          </li>
+        </ul>
+        <!-- Mobile menu -->
+        <ul
+          class="fixed right-0 top-16 bg-white w-1/2 h-90vh transform translate-x-full transition-transform duration-300 ease-in-out opacity-0"
+          id="navMobile"
+        >
+          <div class="flex flex-col items-center h-full">
+            <li
+              class="text-blue-900 py-4 hover:text-secondary hover:bg-primary w-full text-center transition-all"
+            >
+              <a href="#">Home</a>
+            </li>
+            <li
+              class="text-blue-900 py-4 hover:text-secondary hover:bg-primary w-full text-center transition-all"
+            >
+              <a href="#product">Product</a>
+            </li>
+            <li
+              class="text-blue-900 py-4 hover:text-secondary hover:bg-primary w-full text-center transition-all"
+            >
+              <a href="#about">About</a>
+            </li>
+            <li
+              class="text-blue-900 py-4 hover:text-secondary hover:bg-primary w-full text-center transition-all"
+            >
+              <a href="#contact">Contact</a>
+            </li>
+            <li
+              class="text-blue-900 py-4 hover:text-secondary hover:bg-primary w-full text-center transition-all"
+            >
+              <a href="#account">Account</a>
+            </li>
+          </div>
+        </ul>
+        <!-- End Mobile menu -->
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Hero Content -->
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center lg:justify-between px-8 lg:px-24 py-12 lg:py-24 space-y-6 lg:space-y-0"
+      >
+        <!-- Text Section -->
+        <div class="max-w-lg lg:text-left text-center">
+          <h1
+            class="text-xl sm:text-4xl font-bold text-blue-900 leading-snug lg:leading-tight mb-4"
+          >
+            Laptop Berkualitas, Harga Terjangkau
+          </h1>
+          <p class="text-base sm:text-lg lg:text-xl text-blue-800 mb-6">
+            Dapatkan laptop berkualitas dengan harga terbaik hanya di De Laptop.
+            Kami menyediakan berbagai pilihan laptop untuk memenuhi kebutuhan
+            Anda.
+          </p>
+          <a
+            href="#product"
+            class="bg-primary text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-all"
+            >Lihat Produk</a
+          >
+        </div>
+        <div class="relative pt-14 lg:pt-0 flex justify-center items-center">
+          <!-- Gambar Laptop -->
+          <img
+            loading="lazy"
+            src="assets/laptop-hero.png"
+            alt="Laptop Hero"
+            class="w-64 md:w-80 lg:w-[550px] z-10 object-contain"
+          />
+
+          <!-- SVG Background Element -->
+          <svg
+            class="absolute left-4 sm:left-10 w-64 md:w-80 lg:w-550px h-auto z-0"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#0068FF"
+              d="M48.8,-52.4C61.6,-36.1,68.9,-18.1,69.1,0.1C69.2,18.3,62,36.5,49.3,49.3C36.5,62,18.3,69.2,0,69.2C-18.2,69.2,-36.5,61.9,-53.1,49.2C-69.7,36.5,-84.6,18.2,-84.6,0C-84.6,-18.3,-69.8,-36.6,-53.2,-52.9C-36.6,-69.3,-18.3,-83.6,-0.1,-83.5C18.1,-83.4,36.1,-68.8,48.8,-52.4Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- End Hero Content -->
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Feature -->
+    <!-- Feature Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2
+          class="text-sm sm:text-base font-semibold text-primary tracking-wide uppercase mb-2"
+        >
+          Feature
+        </h2>
+        <h3 class="text-2xl leading-8 font-bold text-gray-900 sm:text-3xl mb-8">
+          We have best features for laptops
+        </h3>
+
+        <!-- Feature Cards -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Performance Feature -->
+          <div
+            class="bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center"
+          >
+            <div class="flex justify-center mb-4">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full"
+              >
+                <i data-feather="chevrons-up" class="text-primary w-8 h-8"></i>
+              </div>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">
+              Performance
+            </h4>
+            <p class="text-gray-600">
+              Powerful laptops with fast processing speeds for smooth
+              multitasking and gaming experiences.
+            </p>
+            <a href="#" class="text-blue-800 font-semibold mt-4 block"
+              >Read More &rarr;</a
+            >
+          </div>
+
+          <!-- Durability Feature -->
+          <div
+            class="bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center"
+          >
+            <div class="flex justify-center mb-4">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full"
+              >
+                <i data-feather="shield" class="text-green-500 w-8 h-8"></i>
+              </div>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">Durability</h4>
+            <p class="text-gray-600">
+              Built to last with sturdy materials for long-term reliability in
+              all conditions.
+            </p>
+            <a href="#" class="text-green-800 font-semibold mt-4 block"
+              >Read More &rarr;</a
+            >
+          </div>
+
+          <!-- Warranty Feature -->
+          <div
+            class="bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center"
+          >
+            <div class="flex justify-center mb-4">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-yellow-100 rounded-full"
+              >
+                <i
+                  data-feather="check-circle"
+                  class="text-yellow-500 w-8 h-8"
+                ></i>
+              </div>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-4">Warranty</h4>
+            <p class="text-gray-600">
+              Comprehensive warranty for peace of mind, covering hardware and
+              repairs.
+            </p>
+            <a href="#" class="text-yellow-800 font-semibold mt-4 block"
+              >Read More &rarr;</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <!-- Exclusive Product -->
+    <section
+      class="bg-secondary flex flex-wrap justify-evenly items-center px-12 py-12"
+    >
+      <div class="w-96 sm:w-550px">
+        <img
+          loading="lazy"
+          src="assets/exclusive-product.png"
+          alt="Macbook Pro 16"
+          class="mx-auto"
+        />
+      </div>
+      <div class="flex flex-col pt-6 gap-4 lg:pt-0">
+        <h3
+          class="text-base text-center lg:text-justify font-semibold uppercase text-blue-800 tracking-wider"
+        >
+          EXCLUSIVE PRODUCT
+        </h3>
+        <h3 class="text-xl sm:text-3xl font-bold text-gray-900">
+          Macbook Pro 16
+        </h3>
+        <p class="text-sm text-justify text-blue-800 tracking-wider">
+          Produk eksklusif ini menawarkan performa luar biasa dengan desain
+          premium, <br />
+          cocok untuk para profesional yang menuntut kualitas tinggi.
+        </p>
+        <button
+          class="bg-primary text-white px-4 py-2 rounded-md w-fit hover:bg-blue-700 transition-all"
+        >
+          Beli Sekarang
+        </button>
+      </div>
+    </section>
+    <!-- End Exclusive Product -->
+
+    <!-- Our Product -->
+    <section class="bg-white px-12 py-12" id="product">
+      <h3 class="text-xl sm:text-3xl font-bold text-blue-900 text-center mb-6">
+        Our Product
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-5 w-full mx-auto gap-4">
+        <!-- Product Card -->
+         <!-- Lenovo -->
+        <div class="bg-white shadow-lg rounded-lg w-full overflow-hidden">
+          <img
+            loading="lazy"
+            src="assets/Lenovo/Lenovo1.avif"
+            alt="Laptop"
+            class="w-9/12 h-9/12 flex mx-auto"
+          />
+          <div class="p-4">
+            <h4 class="text-base font-semibold text-gray-900 truncate">Lenovo Yoga Slim 7X Snapdragon X Elite 1TB SSD 32GB Qualcomm Adreno 3K OLED Touch Win11+OHS</h4>
+            <!-- star -->
+            <div class="flex items-center gap-1 mt-2">
+              <i class="fa-solid fa-star text-yellow-500"></i>
+              <p class="text-gray-500 text-sm">100+ Terjual</p>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <div>
+                <div class="flex items-center gap-4">
+                  <h4 class="text-base font-semibold text-gray-900">Rp 25.000.000</h4>
+                </div>
+                <p class="text-gray-600">Lenovo<p>
+              </div>
+              <button
+                class="bg-primary text-white px-6 py-1 rounded-md hover:bg-blue-700 transition-all"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Asus -->
+        <div class="bg-white shadow-lg rounded-lg w-full overflow-hidden">
+          <img
+            loading="lazy"
+            src="assets/Acer/asus1.jpg"
+            alt="Laptop"
+            class="w-9/12 h-9/12 flex mx-auto"
+          />
+          <div class="p-4">
+            <h4 class="text-base font-semibold text-gray-900 truncate">ASUS TUF A16 FA617NSR Ryzen 7 7435HS Radeon RX 7600S 512GB 16" 165Hz - Off Black 16GB</h4>
+            <!-- star -->
+            <div class="flex items-center gap-1 mt-2">
+              <i class="fa-solid fa-star text-yellow-500"></i>
+              <p class="text-gray-500 text-sm">100+ Terjual</p>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <div>
+                <div class="flex items-center gap-4">
+                  <h4 class="text-base font-semibold text-gray-900">Rp 17.199.000</h4>
+                </div>
+                <p class="text-gray-600">ASUS<p>
+              </div>
+              <button
+                class="bg-primary text-white px-6 py-1 rounded-md hover:bg-blue-700 transition-all"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Acer -->
+        <div class="bg-white shadow-lg rounded-lg w-full overflow-hidden">
+          <img
+            loading="lazy"
+            src="assets/Acer/acer1.webp"
+            alt="Laptop"
+            class="w-9/12 h-9/12 flex mx-auto"
+          />
+          <div class="p-4">
+            <h4 class="text-base font-semibold text-gray-900 truncate">Nitro V 15 (ANV15-51-542G) | Core i5 RTX2050</h4>
+            <!-- star -->
+            <div class="flex items-center gap-1 mt-2">
+              <i class="fa-solid fa-star text-yellow-500"></i>
+              <p class="text-gray-500 text-sm">100+ Terjual</p>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <div>
+                <div class="flex items-center gap-4">
+                  <h4 class="text-base font-semibold text-gray-900">Rp 11.749.000</h4>
+                </div>
+                <p class="text-gray-600">Acer<p>
+              </div>
+              <button
+                class="bg-primary text-white px-6 py-1 rounded-md hover:bg-blue-700 transition-all"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Macbook -->
+        <div class="bg-white shadow-lg rounded-lg w-full overflow-hidden">
+          <img
+            loading="lazy"
+            src="assets/Macbook/Macbook1.jpeg"
+            alt="Laptop"
+            class="w-9/12 h-9/12 flex mx-auto"
+          />
+          <div class="p-4">
+            <h4 class="text-base font-semibold text-gray-900 truncate">MacBook Air 2022 – 13.6-inch Liquid Retina – Apple M2 Chip with 8-Core CPU and 10-Core GPU – 512GB</h4>
+            <!-- star -->
+            <div class="flex items-center gap-1 mt-2">
+              <i class="fa-solid fa-star text-yellow-500"></i>
+              <p class="text-gray-500 text-sm">80 Terjual</p>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <div>
+                <div class="flex items-center gap-4">
+                  <h4 class="text-base font-semibold text-gray-900">Rp 19.475.000</h4>
+                </div>
+                <p class="text-gray-600">Macbook<p>
+              </div>
+              <button
+                class="bg-primary text-white px-6 py-1 rounded-md hover:bg-blue-700 transition-all"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- HP -->
+        <div class="bg-white shadow-lg rounded-lg w-full overflow-hidden">
+          <img
+            loading="lazy"
+            src="assets/HP/Hp1.png"
+            alt="Laptop"
+            class="w-9/12 h-9/12 flex mx-auto"
+          />
+          <div class="p-4">
+            <h4 class="text-base font-semibold text-gray-900 truncate">HP Victus 16 inch Gaming Laptop 16-r1005TX, Silver</h4>
+            <!-- star -->
+            <div class="flex items-center gap-1 mt-2">
+              <i class="fa-solid fa-star text-yellow-500"></i>
+              <p class="text-gray-500 text-sm">90 Terjual</p>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <div>
+                <div class="flex items-center gap-4">
+                  <h4 class="text-base font-semibold text-gray-900">Rp 19.500.000</h4>
+                </div>
+                <p class="text-gray-600">Macbook<p>
+              </div>
+              <button
+                class="bg-primary text-white px-6 py-1 rounded-md hover:bg-blue-700 transition-all"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Product -->
+
+    <!-- Testimoni -->
+    <section class="py-12 bg-secondary">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center mb-8 items-center ">
+          <h1 class="text-xl sm:text-3xl font-bold text-blue-900">Testimoni</h1>
+
+        </div>
+          <div class="mb-14 flex flex-col justify-center items-center sm:flex-row sm:items-center sm:justify-between max-sm:gap-8">
+              <h2 class="text-lg sm:text-xl text-center font-bold text-gray-900 lg:text-left">Our Review </h2>
+              <!-- Slider controls -->
+              <div class="flex items-center gap-8">
+                  <button id="slider-button-left"
+                      class="swiper-button-prev group flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600 "
+                      data-carousel-prev>
+                      <svg class="h-6 w-6 text-indigo-600 group-hover:text-white" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                              d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                  </button>
+                  <button id="slider-button-right"
+                      class="swiper-button-next group flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
+                      data-carousel-next>
+                      <svg class="h-6 w-6 text-indigo-600 group-hover:text-white" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                              d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                  </button>
+              </div>
+          </div>
+          <!--Slider wrapper-->
+          <div class="lg:flex grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8 swiper mySwiper">
+              <div class="swiper-wrapper">
+                  <div
+                      class="swiper-slide group bg-white border border-solid h-auto border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600">
+                      <div
+                          class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                      </div>
+                      <p
+                          class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800">
+                          Pagedone is simply the best tool of investment in the market right now.
+                      </p>
+                      <div class="flex items-center gap-5">
+                          <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696229969.png" alt="avatar" />
+                          <div class="grid gap-1">
+                              <h5
+                                  class="text-gray-900 font-medium transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                                  Jane D</h5>
+                              <span class="text-sm leading-6 text-gray-500">CEO </span>
+                          </div>
+                      </div>
+                  </div>
+                  <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600">
+                      <div
+                          class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                      </div>
+                      <p
+                          class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9  group-hover:text-gray-800">
+                          I was hesitant to try pagedone at first, but I'm so glad I did - it's exceeded all of my
+                          expectations.
+                      </p>
+                      <div class="flex items-center gap-5">
+                          <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696229994.png" alt="avatar" />
+                          <div class="grid gap-1">
+                              <h5
+                                  class="text-gray-900 font-medium transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                                  Harsh P.</h5>
+                              <span class="text-sm leading-6 text-gray-500">Product Designer</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 ">
+                      <div
+                          class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                      </div>
+                      <p
+                          class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800 ">
+                          Pagedone stands out as the most user-friendly and effective solution I've ever used.
+                      </p>
+                      <div class="flex items-center gap-5">
+                          <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696230027.png" alt="avatar" />
+                          <div class="grid gap-1">
+                              <h5
+                                  class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                                  Alex K.</h5>
+                              <span class="text-sm leading-6 text-gray-500">Design Lead</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600">
+                      <div
+                          class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                      </div>
+                      <p
+                          class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800">
+                          Pagedone is simply the best tool of investment in the market right now.
+                      </p>
+                      <div class="flex items-center gap-5">
+                          <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696229969.png" alt="avatar" />
+                          <div class="grid gap-1">
+                              <h5
+                                  class="text-gray-900 font-medium transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                                  Jane D</h5>
+                              <span class="text-sm leading-6 text-gray-500">CEO </span>
+                          </div>
+                      </div>
+                  </div>
+                  <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 ">
+                      <div
+                          class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                      </div>
+                      <p
+                          class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9  group-hover:text-gray-800">
+                          I was hesitant to try pagedone at first, but I'm so glad I did - it's exceeded all of my
+                          expectations.
+                      </p>
+                      <div class="flex items-center gap-5">
+                          <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696229994.png" alt="avatar" />
+                          <div class="grid gap-1">
+                              <h5
+                                  class="text-gray-900 font-medium transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                                  Harsh P.</h5>
+                              <span class="text-sm leading-6 text-gray-500">Product Designer</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div
+                      class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 ">
+                      <div
+                          class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                          <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                                  fill="currentColor" />
+                          </svg>
+                      </div>
+                      <p
+                          class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800 ">
+                          Pagedone stands out as the most user-friendly and effective solution I've ever used.
+                      </p>
+                      <div class="flex items-center gap-5">
+                          <img class="rounded-full object-cover" src="https://pagedone.io/asset/uploads/1696230027.png" alt="avatar" />
+                          <div class="grid gap-1">
+                              <h5
+                                  class="text-gray-900 font-medium transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
+                                  Alex K.</h5>
+                              <span class="text-sm leading-6 text-gray-500">Design Lead</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+    <!-- End Testimoni -->
+
+    <!-- Our Sponsor -->
+    <section
+      class="bg-white mx-auto flex flex-wrap justify-evenly gap-4 sm:gap-8 px-4 py-16"
+    >
+      <p
+        class="w-full text-center text-base font-semibold uppercase text-blue-800 tracking-wider"
+      >
+        OUR PREMIUM SPONSORS
+      </p>
+      <!-- Lenovo -->
+      <div class="w-24">
+        <img
+          loading="lazy"
+          src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo-1-500x313.png"
+          alt="Lenovo Logo"
+          class="mx-auto"
+        />
+      </div>
+      <!-- Acer -->
+      <div class="w-24">
+        <img
+          loading="lazy"
+          src="https://1000logos.net/wp-content/uploads/2016/09/Acer-Logo-500x313.png"
+          alt="Acer Logo"
+          class="mx-auto"
+        />
+      </div>
+      <!-- HP -->
+      <div class="w-24">
+        <img
+          loading="lazy"
+          src="https://1000logos.net/wp-content/uploads/2017/02/HP-Logo-2012-500x281.png"
+          alt="HP Logo"
+          class="mx-auto"
+        />
+      </div>
+      <!-- Apple -->
+      <div class="w-24">
+        <img
+          loading="lazy"
+          src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png"
+          alt="Apple Logo"
+          class="mx-auto"
+        />
+      </div>
+      <!-- Asus -->
+      <div class="w-24">
+        <img
+          loading="lazy"
+          src="https://1000logos.net/wp-content/uploads/2016/10/Asus-Logo-1995.png"
+          alt="Asus Logo"
+          class="mx-auto"
+        />
+      </div>
+    </section>
+    <!-- End Our Sponsor -->
+
+    <!-- Footer -->
+    <footer class="footer bg-blue-950 text-gray-100 p-10">
+      <aside class="w-full justify-center sm:mx-0 sm:justify-normal gap-4">
+        <img src="assets/DLFooter.png" alt="logo.png" width="50" height="50" class=" mx-auto sm:mx-0">
+        <p class="text-center sm:text-left">
+          DELAPTOP
+          <br />
+          Providing reliable tech since 2020
+        </p>
+      </aside>
+      <div class="flex justify-around mx-auto sm:mx-0 gap-10 sm:gap-64 sm:justify-normal">
+        <nav class="flex flex-col gap-2">
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav class="flex flex-col gap-2">
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Social</h6>
+          <div class="grid grid-flow-row justify-center sm:justify-normal sm:grid-flow-col gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current hover:text-blue-500 transition-all duration-300">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current hover:text-blue-500 transition-all duration-300">
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current hover:text-blue-500 transition-all duration-300">
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- End Feather Icons -->
+
+
+
+    <!-- Js -->
+    <script src="script.js"></script>
+    <!-- Js -->
+  </body>
+</html>
